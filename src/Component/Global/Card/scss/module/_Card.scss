@@ -1,0 +1,5 @@
+@use "./Mixin" as localMixin;
+
+.card-parent {
+  @include localMixin.cardMixin();
+}

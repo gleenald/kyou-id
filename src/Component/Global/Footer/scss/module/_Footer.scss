@@ -1,0 +1,5 @@
+@use "./Mixin" as localMixin;
+
+.footer {
+  @include localMixin.footerMixin();
+}

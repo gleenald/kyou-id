@@ -1,0 +1,165 @@
+@use "./Variables" as local;
+@use "./../../../../../Utility/GlobalStyle/scss/GlobalColor" as color;
+@use "./../../../../../Utility/GlobalStyle/scss/GlobalMixin" as mixin;
+
+@mixin phone-header() {
+  @include mixin.alignItem(row, space-between, none);
+  background-color: color.$lightGrayColor;
+  height: 2.5rem;
+  box-shadow: 0px 1.5px 2px 1px color.$darkGrayColor;
+
+  .first-container {
+    @include mixin.alignItem(row, none, none);
+    width: 65%;
+
+    .logo-container {
+      @include mixin.alignItem(row, center, center);
+      width: 35%;
+
+      .logo {
+        display: none;
+        @include mixin.imageSize(70px, 70px);
+      }
+    }
+
+    .form-container {
+      @include mixin.alignItem(row, none, center);
+      width: 100%;
+
+      .form-control {
+        display: local.$hideElement;
+      }
+    }
+  }
+
+  .second-container {
+    @include mixin.alignItem(row, space-between, none);
+    width: 25%;
+    margin-right: 2%;
+
+    .cart-container {
+      @include mixin.alignItem(row, center, center);
+
+      .cart {
+        @include mixin.imageSize(20px, 20px);
+      }
+    }
+
+    .magnify-container {
+      @include mixin.alignItem(row, center, center);
+      height: 100%;
+
+      .magnify {
+        @include mixin.imageSize(20px, 20px);
+        display: local.$showElement;
+      }
+    }
+
+    .user-container {
+      @include mixin.alignItem(row, center, center);
+
+      .user-img-container {
+        @include mixin.alignItem(row, center, center);
+        width: 30%;
+        height: 100%;
+
+        .user-img {
+          @include mixin.imageSize(20px, 20px);
+        }
+      }
+
+      .user-text-container {
+        @include mixin.alignItem(row, center, none);
+        height: 100%;
+
+        .user-text {
+          display: local.$hideElement;
+          margin: 0;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+// @mixin desktop-header() {
+//   @include mixin.alignItem(row, space-between, none);
+//   background-color: color.$lightGrayColor;
+//   height: 3.45rem;
+
+//   input:focus {
+//     border-color: #ffb595;
+//     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 5px color.$mainColor;
+//     outline: 0 none;
+//   }
+
+//   .first-container {
+//     background-color: aqua;
+//     @include mixin.alignItem(row, none, none);
+//     width: 55%;
+
+//     .logo-container {
+//       @include mixin.alignItem(row, center, end);
+//       width: 15%;
+//       margin-right: 2%;
+
+//       .logo {
+//         @include mixin.imageSize(110px, 55px);
+//       }
+//     }
+
+//     .form-container {
+//       @include mixin.alignItem(row, none, center);
+//       width: 100%;
+
+//       .form-control {
+//         height: 50%;
+//       }
+//     }
+//   }
+
+//   .second-container {
+//     @include mixin.alignItem(row, end, none);
+//     width: 25%;
+
+//     .cart-container {
+//       @include mixin.alignItem(row, center, center);
+//       width: 20%;
+
+//       .cart {
+//         @include mixin.imageSize(35px, 35px);
+//       }
+//     }
+
+//     .magnify-container {
+//       .magnify {
+//         display: local.$hideElement;
+//       }
+//     }
+
+//     .user-container {
+//       @include mixin.alignItem(row, center, none);
+//       width: 60%;
+
+//       .user-img-container {
+//         @include mixin.alignItem(column, center, none);
+//         width: 30%;
+//         height: 100%;
+
+//         .user-img {
+//           @include mixin.imageSize(30px, 30px);
+//         }
+//       }
+
+//       .user-text-container {
+//         @include mixin.alignItem(column, center, none);
+//         height: 100%;
+
+//         .user-text {
+//           margin: 0;
+//           font-weight: 600;
+//         }
+//       }
+//     }
+//   }
+// }

@@ -1,0 +1,26 @@
+@use "./../../../../../Utility/GlobalStyle/scss/GlobalFont" as font;
+@use "./../../../../../Utility/GlobalStyle/scss/GlobalColor" as color;
+
+@mixin center-item() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin font() {
+  font-family: font.$font-family;
+  font-weight: 300;
+  color: color.$blackColor;
+}
+
+@mixin footerMixin() {
+  @include center-item();
+  background-color: color.$lightGrayColor;
+  height: 3.5rem;
+
+  .title {
+    @include font();
+    margin: 0;
+  }
+}

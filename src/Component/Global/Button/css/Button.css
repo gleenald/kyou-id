@@ -1,0 +1,115 @@
+[class*=bton] {
+  border: 0rem;
+  border-radius: 0.35rem;
+  height: 2.25rem;
+  background-color: #fb510b;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+[class*=main] {
+  background-color: #fb510b;
+}
+
+[class*=success] {
+  background-color: #4fd455;
+}
+
+[class*=warning] {
+  background-color: #ff8451;
+}
+
+[class*=danger] {
+  background-color: #e34444;
+}
+
+[class*=outl] {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.12rem solid #fb510b;
+  color: #fb510b;
+}
+
+[class*=outl-main] {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.12rem solid #fb510b;
+  color: #fb510b;
+}
+
+[class*=outl-success] {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.12rem solid #4fd455;
+  color: #4fd455;
+}
+
+[class*=outl-warning] {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.12rem solid #ff8451;
+  color: #ff8451;
+}
+
+[class*=outl-danger] {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.12rem solid #e34444;
+  color: #e34444;
+}
+
+[class*=sm] {
+  width: 5rem;
+}
+
+[class*=md] {
+  width: 10rem;
+}
+
+[class*=lg] {
+  width: 17rem;
+}
+
+button[class*=main]:hover {
+  background-color: #e94704;
+}
+
+button[class*=success]:hover {
+  background-color: #3bcf41;
+}
+
+button[class*=warning]:hover {
+  background-color: #ff7238;
+}
+
+button[class*=danger]:hover {
+  background-color: #e02e2e;
+}
+
+button[class*=outl]:hover {
+  background-color: #fb510b;
+  color: #fff;
+  border: 0;
+}
+
+button[class*=outl-main]:hover {
+  background-color: #fb510b;
+  color: #fff;
+  border: 0;
+}
+
+button[class*=outl-success]:hover {
+  background-color: #4fd455;
+  color: #fff;
+  border: 0;
+}
+
+button[class*=outl-warning]:hover {
+  background-color: #ff8451;
+  color: #fff;
+  border: 0;
+}
+
+button[class*=outl-danger]:hover {
+  background-color: #e34444;
+  color: #fff;
+  border: 0;
+}
+
+/*# sourceMappingURL=Button.css.map */

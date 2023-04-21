@@ -1,0 +1,89 @@
+@use "./Mixin" as localMixin;
+
+[class*="bton"] {
+  @include localMixin.baseButton-mixin();
+}
+
+[class*="main"] {
+  @include localMixin.buttonBackground-mixin("main");
+}
+
+[class*="success"] {
+  @include localMixin.buttonBackground-mixin("success");
+}
+
+[class*="warning"] {
+  @include localMixin.buttonBackground-mixin("warning");
+}
+
+[class*="danger"] {
+  @include localMixin.buttonBackground-mixin("danger");
+}
+
+[class*="outl"] {
+  @include localMixin.buttonOutline-mixin("main");
+}
+
+[class*="outl-main"] {
+  @include localMixin.buttonOutline-mixin("main");
+}
+
+[class*="outl-success"] {
+  @include localMixin.buttonOutline-mixin("success");
+}
+
+[class*="outl-warning"] {
+  @include localMixin.buttonOutline-mixin("warning");
+}
+
+[class*="outl-danger"] {
+  @include localMixin.buttonOutline-mixin("danger");
+}
+
+[class*="sm"] {
+  @include localMixin.buttonSize-mixin("small");
+}
+
+[class*="md"] {
+  @include localMixin.buttonSize-mixin("medium");
+}
+
+[class*="lg"] {
+  @include localMixin.buttonSize-mixin("large");
+}
+
+button[class*="main"]:hover {
+  @include localMixin.buttonHover-mixin("main");
+}
+
+button[class*="success"]:hover {
+  @include localMixin.buttonHover-mixin("success");
+}
+
+button[class*="warning"]:hover {
+  @include localMixin.buttonHover-mixin("warning");
+}
+
+button[class*="danger"]:hover {
+  @include localMixin.buttonHover-mixin("danger");
+}
+
+button[class*="outl"]:hover {
+  @include localMixin.buttonOutlHover-mixin("main");
+}
+
+button[class*="outl-main"]:hover {
+  @include localMixin.buttonOutlHover-mixin("main");
+}
+
+button[class*="outl-success"]:hover {
+  @include localMixin.buttonOutlHover-mixin("success");
+}
+
+button[class*="outl-warning"]:hover {
+  @include localMixin.buttonOutlHover-mixin("warning");
+}
+
+button[class*="outl-danger"]:hover {
+  @include localMixin.buttonOutlHover-mixin("danger");
+}

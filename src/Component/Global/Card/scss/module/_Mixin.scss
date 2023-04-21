@@ -1,0 +1,103 @@
+@use "./../../../../../Utility/GlobalStyle/scss/GlobalFont" as font;
+@use "./../../../../../Utility/GlobalStyle//scss/GlobalColor" as color;
+@use "./Variables" as local;
+
+@mixin font($font-weightVal, $colorVal) {
+  font-size: local.$font-size;
+  font-weight: $font-weightVal;
+  color: $colorVal;
+}
+
+@mixin margin($marginMode) {
+  @if $marginMode == "parent" {
+    margin: 0.1rem 0.5rem 0.5rem;
+  } @else if $marginMode == "child" {
+    margin: 0.15rem 0rem 0.15rem;
+  } @else if $marginMode == "none" {
+    margin: 0rem;
+  } @else {
+    @error "Unknown margin mode";
+  }
+}
+
+@mixin border-radius($radiusMode) {
+  @if $radiusMode == "statusBox" {
+    border-radius: 0.5rem;
+  } @else if $radiusMode == "normal" {
+    border-radius: 0.25rem;
+  } @else {
+    @error "Unknown radius mode";
+  }
+}
+
+@mixin item-status($statusVal) {
+  @if $statusVal == "ready stock" {
+    background-color: local.$ready-stock;
+  } @else if $statusVal == "late pre order" {
+    background-color: local.$late-pre-order;
+  } @else if $statusVal == "pre order" {
+    background-color: local.$pre-order;
+  } @else {
+    @error "Unknown item status";
+  }
+}
+
+@mixin cardMixin() {
+  @include margin("parent");
+  @include border-radius("normal");
+  width: 9rem;
+  padding: 0.2rem;
+
+  .img {
+    @include margin("child");
+    @include border-radius("normal");
+    height: local.$img-size;
+    width: local.$img-size;
+  }
+
+  div[class|="status-box pre-order"] {
+    @include border-radius("statusBox");
+    @include item-status("pre order");
+    max-width: 70%;
+
+    .status {
+      @include margin("child");
+      @include font(font.$font-weight-title, color.$whiteColor);
+      text-align: center;
+    }
+  }
+
+  div[class|="status-box late-pre-order"] {
+    @include border-radius("statusBox");
+    @include item-status("late pre order");
+    max-width: 70%;
+
+    .status {
+      @include margin("child");
+      @include font(font.$font-weight-title, color.$whiteColor);
+      text-align: center;
+    }
+  }
+
+  div[class|="status-box ready-stock"] {
+    @include border-radius("statusBox");
+    @include item-status("ready stock");
+    max-width: 70%;
+
+    .status {
+      @include margin("child");
+      @include font(font.$font-weight-title, color.$whiteColor);
+      text-align: center;
+    }
+  }
+
+  .name {
+    @include margin("child");
+    @include font(font.$font-weight-title, color.$blackColor);
+  }
+
+  .price {
+    @include margin("none");
+    @include font(font.$font-weight-body, color.$mainColor);
+  }
+}

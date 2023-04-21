@@ -1,0 +1,24 @@
+@use "./../../../../../Utility/GlobalStyle/scss/GlobalColor" as color;
+@use "./../../../../../Utility/GlobalStyle/scss/GlobalMixin" as mixin;
+
+@mixin titleBar() {
+  @include mixin.alignItem(column, center, none);
+  background-color: color.$darkGrayColor2;
+  width: 100%;
+  height: 2.2rem;
+  border-radius: 0.25rem;
+
+  .title-container {
+    @include mixin.alignItem(column, center, none);
+    margin-left: 1rem;
+    height: 90%;
+    border-left: 0.25rem solid color.$mainColor;
+
+    .title {
+      @include mixin.fontStyle(1.1rem, 300);
+      color: color.$whiteColor;
+      padding-left: 1rem;
+      margin-bottom: 0;
+    }
+  }
+}

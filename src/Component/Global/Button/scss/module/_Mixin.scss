@@ -1,0 +1,97 @@
+@use "./../../../../../Utility/GlobalStyle/scss/GlobalColor" as color;
+@use "./../../../../../Utility/GlobalStyle/scss/GlobalFont" as font;
+@use "./Variables" as local;
+
+@mixin baseButton-mixin() {
+  border: local.$border-button;
+  border-radius: local.$border-radius-button;
+  height: local.$height-button;
+  background-color: color.$mainColor;
+  color: color.$whiteColor;
+  font-family: font.$font-family;
+  font-weight: font.$font-weight-body;
+}
+
+@mixin buttonBackground-mixin($buttonMode) {
+  @if $buttonMode == "main" {
+    background-color: color.$mainColor;
+  } @else if $buttonMode == "success" {
+    background-color: color.$successColor;
+  } @else if $buttonMode == "warning" {
+    background-color: color.$warningColor;
+  } @else if $buttonMode == "danger" {
+    background-color: color.$dangerColor;
+  } @else {
+    @error "unknown button mode";
+  }
+}
+
+@mixin buttonOutline-mixin($buttonMode) {
+  @if $buttonMode == "main" {
+    background-color: color.$transparent;
+    border: local.$border-width solid color.$mainColor;
+    color: color.$mainColor;
+  } @else if $buttonMode == "success" {
+    background-color: color.$transparent;
+    border: local.$border-width solid color.$successColor;
+    color: color.$successColor;
+  } @else if $buttonMode == "warning" {
+    background-color: color.$transparent;
+    border: local.$border-width solid color.$warningColor;
+    color: color.$warningColor;
+  } @else if $buttonMode == "danger" {
+    background-color: color.$transparent;
+    border: local.$border-width solid color.$dangerColor;
+    color: color.$dangerColor;
+  } @else {
+    @error "unknown button mode";
+  }
+}
+
+@mixin buttonSize-mixin($widthValue) {
+  @if $widthValue == "small" {
+    width: local.$sm-size;
+  } @else if $widthValue == "medium" {
+    width: local.$md-size;
+  } @else if $widthValue == "large" {
+    width: local.$lg-size;
+  } @else {
+    @error "unknown width value";
+  }
+}
+
+@mixin buttonHover-mixin($buttonMode) {
+  @if $buttonMode == "main" {
+    background-color: darken($color: color.$mainColor, $amount: 5%);
+  } @else if $buttonMode == "success" {
+    background-color: darken($color: color.$successColor, $amount: 5%);
+  } @else if $buttonMode == "warning" {
+    background-color: darken($color: color.$warningColor, $amount: 5%);
+  } @else if $buttonMode == "danger" {
+    background-color: darken($color: color.$dangerColor, $amount: 5%);
+  } @else {
+    @error "unknown button mode";
+  }
+}
+
+@mixin buttonOutlHover-mixin($buttonMode) {
+  @if $buttonMode == "main" {
+    background-color: color.$mainColor;
+    color: color.$whiteColor;
+    border: 0;
+  } @else if $buttonMode == "success" {
+    background-color: color.$successColor;
+    color: color.$whiteColor;
+    border: 0;
+  } @else if $buttonMode == "warning" {
+    background-color: color.$warningColor;
+    color: color.$whiteColor;
+    border: 0;
+  } @else if $buttonMode == "danger" {
+    background-color: color.$dangerColor;
+    color: color.$whiteColor;
+    border: 0;
+  } @else {
+    @error "unknown button mode";
+  }
+}

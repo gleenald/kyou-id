@@ -1,0 +1,8 @@
+@use "../../../Utility/GlobalStyle/scss/GlobalMixin";
+
+[class*="col"] {
+  @include GlobalMixin.gridSystemCol();
+}
+[class*="row"] {
+  @include GlobalMixin.gridSystemRow();
+}

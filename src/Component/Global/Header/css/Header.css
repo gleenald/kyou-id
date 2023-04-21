@@ -1,0 +1,117 @@
+@media only screen and (max-width: 626px) {
+  .header-parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #d9d9d9;
+    height: 2.5rem;
+    box-shadow: 0px 1.5px 2px 1px #c2c2c2;
+  }
+  .header-parent .first-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: none;
+    align-items: none;
+    display: flex;
+    flex-direction: row;
+    align-items: none;
+    width: 65%;
+  }
+  .header-parent .first-container .logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+  }
+  .header-parent .first-container .logo-container .logo {
+    display: none;
+    width: 70px;
+    height: 70px;
+  }
+  .header-parent .first-container .form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: none;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+  .header-parent .first-container .form-container .form-control {
+    display: none;
+  }
+  .header-parent .second-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 25%;
+    margin-right: 2%;
+  }
+  .header-parent .second-container .cart-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-parent .second-container .cart-container .cart {
+    width: 20px;
+    height: 20px;
+  }
+  .header-parent .second-container .magnify-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .header-parent .second-container .magnify-container .magnify {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+  .header-parent .second-container .user-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-parent .second-container .user-container .user-img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+  }
+  .header-parent .second-container .user-container .user-img-container .user-img {
+    width: 20px;
+    height: 20px;
+  }
+  .header-parent .second-container .user-container .user-text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+  }
+  .header-parent .second-container .user-container .user-text-container .user-text {
+    display: none;
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+/*# sourceMappingURL=Header.css.map */

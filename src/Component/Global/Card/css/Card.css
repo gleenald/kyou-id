@@ -1,0 +1,62 @@
+.card-parent {
+  margin: 0.1rem 0.5rem 0.5rem;
+  border-radius: 0.25rem;
+  width: 9rem;
+  padding: 0.2rem;
+}
+.card-parent .img {
+  margin: 0.15rem 0rem 0.15rem;
+  border-radius: 0.25rem;
+  height: 135px;
+  width: 135px;
+}
+.card-parent div[class|="status-box pre-order"] {
+  border-radius: 0.5rem;
+  background-color: #657996;
+  max-width: 70%;
+}
+.card-parent div[class|="status-box pre-order"] .status {
+  margin: 0.15rem 0rem 0.15rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+.card-parent div[class|="status-box late-pre-order"] {
+  border-radius: 0.5rem;
+  background-color: #d3647a;
+  max-width: 70%;
+}
+.card-parent div[class|="status-box late-pre-order"] .status {
+  margin: 0.15rem 0rem 0.15rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+.card-parent div[class|="status-box ready-stock"] {
+  border-radius: 0.5rem;
+  background-color: #41b774;
+  max-width: 70%;
+}
+.card-parent div[class|="status-box ready-stock"] .status {
+  margin: 0.15rem 0rem 0.15rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+.card-parent .name {
+  margin: 0.15rem 0rem 0.15rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #000;
+}
+.card-parent .price {
+  margin: 0rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #fb510b;
+}
+
+/*# sourceMappingURL=Card.css.map */

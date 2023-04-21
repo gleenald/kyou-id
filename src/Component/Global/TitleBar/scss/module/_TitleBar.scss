@@ -1,0 +1,5 @@
+@use "./Mixin" as localMixin;
+
+.parent-container {
+  @include localMixin.titleBar();
+}
